@@ -30,6 +30,8 @@ public class QDKQActivity extends Activity implements OnClickListener {
 	private Button btn_takePhoto, btn_dingwei;
 	private LocationService locationService;
 	public LocationClient mLocationClient = null;
+	private String address;
+	private TextView text_location;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -45,6 +47,7 @@ public class QDKQActivity extends Activity implements OnClickListener {
 		btn_dingwei = (Button) findViewById(R.id.btn_dingwei);
 		btn_dingwei.setOnClickListener(this);
 		btn_takePhoto.setOnClickListener(this);
+		text_location=(TextView) findViewById(R.id.text_location);
 	}
 	@Override
 	protected void onStart() {
@@ -102,6 +105,8 @@ public class QDKQActivity extends Activity implements OnClickListener {
 		public void onReceiveLocation(BDLocation location) {
 			// TODO Auto-generated method stub
 			if (null != location && location.getLocType() != BDLocation.TypeServerError) {
+				address=location.getAddrStr();
+				text_location.setText(address);
 				StringBuffer sb = new StringBuffer(256);
 				sb.append("time : ");
 				/**

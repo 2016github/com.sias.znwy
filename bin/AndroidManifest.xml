@@ -40,7 +40,7 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="plXdqb6G9nQ1eXTuenilljuM" />    
         <activity
-            android:name="com.sias.znwyto.activity.LoginActivity"
+            android:name="com.sias.znwy.activity.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,17 +48,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.sias.znwyto.activity.HomeActivity" />
-        <activity android:name="com.sias.znwyto.activity.CQSBActivity" />
-        <activity android:name="com.sias.znwyto.activity.TZTGActivity" />
-        <activity android:name="com.sias.znwyto.activity.QDKQActivity" />
-        <activity android:name="com.sias.znwyto.activity.JLXCActivity" />
-        <activity android:name="com.sias.znwyto.activity.YHRWActivity" />
-        <activity android:name="com.sias.znwyto.activity.GZJHActivity" />
-        <activity android:name="com.sias.znwyto.activity.GZZJActivity" />
-        <activity android:name="com.sias.znwyto.activity.XCHBActivity" />
-        <activity android:name="com.sias.znwyto.activity.XTSZActivity" />
-        <activity android:name="com.sias.znwyto.activity.XiugPasswordActivity" />
+        <activity android:name="com.sias.znwy.activity.HomeActivity" />
+        <activity android:name="com.sias.znwy.activity.CQSBActivity" />
+        <activity android:name="com.sias.znwy.activity.TZTGActivity" />
+        <activity android:name="com.sias.znwy.activity.QDKQActivity" />
+        <activity android:name="com.sias.znwy.activity.JLXCActivity" />
+        <activity android:name="com.sias.znwy.activity.YHRWActivity" />
+        <activity android:name="com.sias.znwy.activity.GZJHActivity" />
+        <activity android:name="com.sias.znwy.activity.GZZJActivity" />
+        <activity android:name="com.sias.znwy.activity.XCHBActivity" />
+        <activity android:name="com.sias.znwy.activity.XTSZActivity" />
+        <activity android:name="com.sias.znwy.activity.XiugPasswordActivity" />
 
         <service
             android:name="com.baidu.location.f"
