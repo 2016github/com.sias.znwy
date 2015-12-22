@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ActivityTitleView">
+        <attr name="ActivityTitleViewName" format="string" />
+        <attr name="ActivityTitleViewRightText" format="string" />
+        <attr name="Visiable" format="integer" />
+    </declare-styleable>
+
+</resources>

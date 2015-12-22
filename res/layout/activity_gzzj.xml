@@ -3,30 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:background="#7bbfea" >
 
-        <TextView
-            android:id="@+id/text_return"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-             android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:text="返回"
-            android:textSize="16sp"
-            android:clickable="true"
-            android:textColor="@android:color/white"/>
-
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="18sp"
-             android:textColor="@android:color/white"
-            android:text="工作总结" />
-    </RelativeLayout>
+    <com.sias.znwy.Util.ActivityTitleView
+        xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        znwy:ActivityTitleViewName="工作总结"
+        znwy:ActivityTitleViewRightText="右侧字体描述"
+        znwy:Visiable="0" >
+    </com.sias.znwy.Util.ActivityTitleView>
 
 </LinearLayout>

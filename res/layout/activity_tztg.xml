@@ -4,31 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:background="#7bbfea" >
-
-        <TextView
-            android:id="@+id/text_return"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="返回"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:text="通知公告"
-            android:textColor="@android:color/white"
-            android:textSize="18sp" />
-    </RelativeLayout>
+    <com.sias.znwy.Util.ActivityTitleView
+        xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        znwy:ActivityTitleViewName="通知公告"
+        znwy:ActivityTitleViewRightText="右侧字体描述"
+        znwy:Visiable="0" >
+    </com.sias.znwy.Util.ActivityTitleView>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -44,12 +27,12 @@
             android:text="请选择日期：" />
 
         <EditText
-            android:clickable="true"
             android:id="@+id/edit_data"
             android:layout_width="0dp"
-            android:focusable="true"
             android:layout_height="wrap_content"
             android:layout_weight="2.65"
+            android:clickable="true"
+            android:focusable="true"
             android:text="2015-12-7" />
 
         <Button

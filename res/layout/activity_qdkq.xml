@@ -4,31 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:background="#7bbfea" >
-
-        <TextView
-            android:id="@+id/text_return"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="返回"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:text="签到考勤"
-            android:textColor="@android:color/white"
-            android:textSize="18sp" />
-    </RelativeLayout>
+    <com.sias.znwy.Util.ActivityTitleView
+        xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        znwy:ActivityTitleViewName="签到考勤"
+        znwy:ActivityTitleViewRightText="右侧字体描述"
+        znwy:Visiable="0" >
+    </com.sias.znwy.Util.ActivityTitleView>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -37,9 +20,9 @@
 
         <TextView
             android:id="@+id/text_nameandtime"
-            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:text="你好king" />
     </LinearLayout>
 
@@ -47,39 +30,42 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#cccccc" />
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:gravity="center_vertical" 
-        android:orientation="horizontal">
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/text_dingwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="定位:" />
-         <TextView
-             android:id="@+id/text_location"
-            android:layout_toRightOf="@id/text_dingwei"
+
+        <TextView
+            android:id="@+id/text_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/text_dingwei"
             android:text="正在定位" />
-         <Button 
-             android:id="@+id/btn_dingwei"
-             android:layout_alignParentRight="true"
-             android:layout_marginRight="10dp"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:background="@drawable/dingwei"/>
-        
+
+        <Button
+            android:id="@+id/btn_dingwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dingwei" />
     </RelativeLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#cccccc" />
-     <LinearLayout
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
@@ -88,14 +74,15 @@
 
         <Button
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="上路巡查" />
-          <Button
-            android:layout_marginLeft="10dp"
+
+        <Button
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:text="上路巡查" />
     </LinearLayout>
 
@@ -103,7 +90,8 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#cccccc" />
-      <LinearLayout
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
@@ -112,7 +100,7 @@
 
         <EditText
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" >
         </EditText>
     </LinearLayout>
 
@@ -120,7 +108,8 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#cccccc" />
-      <RelativeLayout
+
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
@@ -129,10 +118,10 @@
 
         <Button
             android:id="@+id/btn_takephoto"
-            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/paizhao">
+            android:layout_alignParentRight="true"
+            android:background="@drawable/paizhao" >
         </Button>
     </RelativeLayout>
 
@@ -140,24 +129,24 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#cccccc" />
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:gravity="center_vertical" >
-        <ImageView 
-            android:layout_centerInParent="true"
+
+        <ImageView
             android:id="@+id/img_showphoto"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#cccccc" />
-    
 
 </LinearLayout>

@@ -9,6 +9,30 @@ package com.sias.znwy;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ActivityTitleViewName=0x7f010000;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ActivityTitleViewRightText=0x7f010001;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int Visiable=0x7f010002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -44,30 +68,32 @@ public final class R {
         public static final int zairu=0x7f020013;
     }
     public static final class id {
-        public static final int action_settings=0x7f080017;
-        public static final int btn_dingwei=0x7f080009;
-        public static final int btn_login=0x7f080003;
-        public static final int btn_query=0x7f08000d;
-        public static final int btn_sure=0x7f080012;
-        public static final int btn_takephoto=0x7f08000a;
-        public static final int edit_data=0x7f08000c;
-        public static final int edit_jiuPassword=0x7f08000f;
-        public static final int edit_name=0x7f080001;
-        public static final int edit_password=0x7f080002;
-        public static final int edit_xinPassword=0x7f080010;
-        public static final int edit_xinPasswordto=0x7f080011;
-        public static final int gridview=0x7f080005;
-        public static final int img=0x7f080014;
-        public static final int img_showphoto=0x7f08000b;
-        public static final int progressBar1=0x7f08000e;
-        public static final int rl_xiug=0x7f080013;
-        public static final int text=0x7f080015;
-        public static final int text_dingwei=0x7f080007;
-        public static final int text_location=0x7f080008;
-        public static final int text_nameandtime=0x7f080006;
-        public static final int text_return=0x7f080000;
-        public static final int text_username=0x7f080004;
-        public static final int text_version=0x7f080016;
+        public static final int action_settings=0x7f080019;
+        public static final int activity_title=0x7f080017;
+        public static final int activity_title_rightText=0x7f080018;
+        public static final int btn_dingwei=0x7f080008;
+        public static final int btn_login=0x7f080002;
+        public static final int btn_query=0x7f08000c;
+        public static final int btn_sure=0x7f080011;
+        public static final int btn_takephoto=0x7f080009;
+        public static final int edit_data=0x7f08000b;
+        public static final int edit_jiuPassword=0x7f08000e;
+        public static final int edit_name=0x7f080000;
+        public static final int edit_password=0x7f080001;
+        public static final int edit_xinPassword=0x7f08000f;
+        public static final int edit_xinPasswordto=0x7f080010;
+        public static final int gridview=0x7f080004;
+        public static final int img=0x7f080013;
+        public static final int img_showphoto=0x7f08000a;
+        public static final int progressBar1=0x7f08000d;
+        public static final int rl_xiug=0x7f080012;
+        public static final int text=0x7f080014;
+        public static final int text_dingwei=0x7f080006;
+        public static final int text_location=0x7f080007;
+        public static final int text_nameandtime=0x7f080005;
+        public static final int text_return=0x7f080016;
+        public static final int text_username=0x7f080003;
+        public static final int text_version=0x7f080015;
     }
     public static final class layout {
         public static final int activity_cqsb=0x7f030000;
@@ -84,6 +110,7 @@ public final class R {
         public static final int activity_xtsz=0x7f03000b;
         public static final int activity_yhrw=0x7f03000c;
         public static final int gridview_item=0x7f03000d;
+        public static final int util_activity_title=0x7f03000e;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -121,4 +148,65 @@ public final class R {
          */
         public static final int AppTheme=0x7f060001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ActivityTitleView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ActivityTitleView_ActivityTitleViewName com.sias.znwy:ActivityTitleViewName}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityTitleView_ActivityTitleViewRightText com.sias.znwy:ActivityTitleViewRightText}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityTitleView_Visiable com.sias.znwy:Visiable}</code></td><td></td></tr>
+           </table>
+           @see #ActivityTitleView_ActivityTitleViewName
+           @see #ActivityTitleView_ActivityTitleViewRightText
+           @see #ActivityTitleView_Visiable
+         */
+        public static final int[] ActivityTitleView = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.sias.znwy.R.attr#ActivityTitleViewName}
+          attribute's value can be found in the {@link #ActivityTitleView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.sias.znwy:ActivityTitleViewName
+        */
+        public static final int ActivityTitleView_ActivityTitleViewName = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.sias.znwy.R.attr#ActivityTitleViewRightText}
+          attribute's value can be found in the {@link #ActivityTitleView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.sias.znwy:ActivityTitleViewRightText
+        */
+        public static final int ActivityTitleView_ActivityTitleViewRightText = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.sias.znwy.R.attr#Visiable}
+          attribute's value can be found in the {@link #ActivityTitleView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.sias.znwy:Visiable
+        */
+        public static final int ActivityTitleView_Visiable = 2;
+    };
 }
