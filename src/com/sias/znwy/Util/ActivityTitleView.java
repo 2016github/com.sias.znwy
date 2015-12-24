@@ -17,7 +17,6 @@ public class ActivityTitleView extends RelativeLayout {
 
 	public ActivityTitleView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
-		// Constants.changeSize(context, this, true);
 	}
 
 	public ActivityTitleView(Context context, AttributeSet attrs) {
@@ -57,12 +56,9 @@ public class ActivityTitleView extends RelativeLayout {
 		simpleItem = (TextView) view.findViewById(R.id.activity_title);
 		titleRightText = (TextView) view.findViewById(R.id.activity_title_rightText);
 		view.findViewById(R.id.text_return).setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
-
 				((Activity) context).finish();
-
 			}
 		});
 
