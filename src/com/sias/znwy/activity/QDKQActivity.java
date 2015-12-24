@@ -1,7 +1,7 @@
 package com.sias.znwy.activity;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -11,18 +11,25 @@ import com.sias.znwy.R;
 import com.sias.znwy.Util.UserInfo;
 import com.sias.znwy.service.LocationService;
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.SystemClock;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 签到考勤
- * 
  * @author Administrator
- * 
  */
 public class QDKQActivity extends Activity implements OnClickListener {
 	private TextView text_nameandtime;
@@ -32,6 +39,8 @@ public class QDKQActivity extends Activity implements OnClickListener {
 	public LocationClient mLocationClient = null;
 	private String address;
 	private TextView text_location;
+	String picturename;
+	private ImageView img_showphoto;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -41,6 +50,7 @@ public class QDKQActivity extends Activity implements OnClickListener {
 	}
 	private void initView() {
 		text_return = (TextView) findViewById(R.id.text_return);
+		text_return.setOnClickListener(this);
 		text_nameandtime = (TextView) findViewById(R.id.text_nameandtime);
 		text_nameandtime.setText("你好：" + UserInfo.getYhdh() + " 现在是：" + getNowData());
 		btn_takePhoto = (Button) findViewById(R.id.btn_takephoto);
@@ -48,6 +58,7 @@ public class QDKQActivity extends Activity implements OnClickListener {
 		btn_dingwei.setOnClickListener(this);
 		btn_takePhoto.setOnClickListener(this);
 		text_location=(TextView) findViewById(R.id.text_location);
+		img_showphoto=(ImageView) findViewById(R.id.img_showphoto);
 	}
 	@Override
 	protected void onStart() {
@@ -79,12 +90,44 @@ public class QDKQActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.btn_takephoto:
 			// 拍照
+			picturename=Long.toString(SystemClock.currentThreadTimeMillis())+".jpg";
+			Takephoto();
 			break;
 
 		default:
 			break;
 		}
 	}
+	/**
+	 * 拍照
+	 */
+	private void Takephoto() {
+
+		Intent intentFromCapture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		 
+        // 判断存储卡是否可用，存储照片文件
+        if (hasSdcard()) {
+            intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT, Uri .fromFile(new File(Environment.getExternalStorageDirectory(), picturename)));
+        }
+ 
+        startActivityForResult(intentFromCapture, 1);
+		
+	
+		
+	}
+	/**
+	 * 判断SD卡是否可用
+	 * @return
+	 */
+	private boolean hasSdcard() {
+        String state = Environment.getExternalStorageState();
+        if (state.equals(Environment.MEDIA_MOUNTED)) {
+            // 有存储的SDCard
+            return true;
+        } else {
+            return false;
+        }
+        }
 	/**
 	 * 获取当前日期
 	 */
@@ -179,5 +222,29 @@ public class QDKQActivity extends Activity implements OnClickListener {
 			}
 		}
 
+	};
+	protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+
+		// TODO Auto-generated method stub
+		switch (requestCode) {
+		case 1:
+			if (hasSdcard()) {
+				File tempFile = new File(Environment.getExternalStorageDirectory(),picturename);
+				Bitmap bm = BitmapFactory.decodeFile(tempFile.getAbsolutePath());
+				img_showphoto.setImageBitmap(bm);
+//				bm.recycle();
+            } else {
+                Toast.makeText(QDKQActivity.this, "没有SDCard!", Toast.LENGTH_LONG)
+                        .show();
+            }
+			break;
+		
+		default:
+			break;
+		}
+		super.onActivityResult(requestCode, resultCode, intent);
+	
+		
+		
 	};
 }
