@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         znwy:ActivityTitleViewName="签到考勤"
-        znwy:ActivityTitleViewRightText="右侧字体描述"
-        znwy:Visiable="0" >
+        znwy:ActivityTitleViewRightText="提交"
+        znwy:Visiable="1" >
     </com.sias.znwy.Util.ActivityTitleView>
 
     <LinearLayout
@@ -132,7 +132,7 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:gravity="center_vertical" >

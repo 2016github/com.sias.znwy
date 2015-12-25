@@ -8,9 +8,14 @@
         xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        znwy:ActivityTitleViewName="工作总结"
-        znwy:ActivityTitleViewRightText="右侧字体描述"
-        znwy:Visiable="0" >
+        znwy:ActivityTitleViewName="工作日结"
+        znwy:ActivityTitleViewRightText="写日结"
+        znwy:Visiable="1" >
     </com.sias.znwy.Util.ActivityTitleView>
+    <com.sias.znwy.Util.ActivityDateView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_dataview">
+    </com.sias.znwy.Util.ActivityDateView>
 
 </LinearLayout>

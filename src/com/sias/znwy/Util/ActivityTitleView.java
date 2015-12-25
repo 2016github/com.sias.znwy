@@ -1,20 +1,21 @@
 package com.sias.znwy.Util;
+import java.util.Calendar;
 
 import com.sias.znwy.R;
-
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.DatePicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class ActivityTitleView extends RelativeLayout {
 	private TextView simpleItem;
 	private TextView titleRightText;
-
 	public ActivityTitleView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 	}
@@ -63,4 +64,7 @@ public class ActivityTitleView extends RelativeLayout {
 		});
 
 	}
+	/**
+	 * 日期选择对话框
+	 */
 }

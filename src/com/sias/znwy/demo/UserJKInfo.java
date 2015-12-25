@@ -2,7 +2,7 @@ package com.sias.znwy.demo;
 import java.io.Serializable;
 
 import com.sias.znwy.web.util.IWebBeanParam;
-public class UserInfo implements IWebBeanParam, Serializable {
+public class UserJKInfo implements IWebBeanParam, Serializable {
 	private String pin;
 	private Tusbkey t_usbkey;
 	public Tusbkey getT_usbkey() {

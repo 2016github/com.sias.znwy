@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         znwy:ActivityTitleViewName="出勤上报"
-        znwy:ActivityTitleViewRightText="右侧字体描述"
-        znwy:Visiable="0" >
+        znwy:ActivityTitleViewRightText="提交"
+        znwy:Visiable="1" >
     </com.sias.znwy.Util.ActivityTitleView>
 
 </LinearLayout>
