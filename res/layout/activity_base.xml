@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.sias.znwy.Util.ActivityTitle
+        android:id="@+id/activityTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    </com.sias.znwy.Util.ActivityTitle>
+
+    <LinearLayout
+        android:id="@+id/quryLauout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#E8E8E8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="请选择日期：" />
+
+        <TextView
+            android:id="@+id/edit_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.65"
+            android:background="@drawable/znwy_datetext_gb"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:text="2015-12-7" />
+
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.46"
+            android:text="查询" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/dateList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

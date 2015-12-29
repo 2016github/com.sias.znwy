@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.sias.znwy.Util.ActivityTitleView
+        xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
+        android:id="@+id/jlxcShangbaoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        znwy:ActivityTitleViewName="监理巡查上报"
+        znwy:ActivityTitleViewRightText="上报"
+        znwy:Visiable="1" >
+    </com.sias.znwy.Util.ActivityTitleView>
+    <!-- 管理部门、上报时间、桩号、米数、行驶方向代码（1上行、2下行）、车道号（可空、数字编号）、病害大类代码、病害小类代码、病害子类代码、病害描述、病害部位拍照、gps坐标x、坐标y -->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <EditText
+                    android:id="@+id/management"
+                    style="@style/jlxcEditText"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/management"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/management"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="管理部门：" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp" >
+
+                    <EditText
+                        android:id="@+id/pileNumber"
+                        style="@style/jlxcEditText"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/textView2"
+                        android:ems="10" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/pileNumber"
+                        android:layout_alignTop="@+id/pileNumber"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="桩号：" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp" >
+
+                    <EditText
+                        android:id="@+id/shangBaoMiNumber"
+                        style="@style/jlxcEditText"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/textView4"
+                        android:layout_toRightOf="@+id/textVi1"
+                        android:ems="10"
+                        android:inputType="number|numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/textVi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/shangBaoMiNumber"
+                        android:layout_alignTop="@+id/shangBaoMiNumber"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="米数：" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/shangBaoMiNumber"
+                        android:layout_alignBottom="@+id/shangBaoMiNumber"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="米" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/tex1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="行驶方向：" />
+
+                    <Spinner
+                        android:id="@+id/drivingDirection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tex1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp" >
+
+                    <EditText
+                        android:id="@+id/cartLaneMiNumber"
+                        style="@style/jlxcEditText"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/textView"
+                        android:ems="10" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/cartLaneMiNumber"
+                        android:layout_alignTop="@+id/cartLaneMiNumber"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="车道号：" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="病害类别:" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/conditionParent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/conditionSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/textView3"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <Spinner
+                        android:id="@+id/conditionThird"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/textView3"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="位置信息：" />
+
+                <TextView
+                    android:id="@+id/addressMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/location"
+                    android:layout_toRightOf="@+id/textView5"
+                    android:singleLine="true"
+                    android:text="TextView" />
+
+                <Button
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/dingwei" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="病情描述：" />
+
+                <EditText
+                    android:id="@+id/memo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView6" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp" >
+
+                <Button
+                    android:id="@+id/btn_takephoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/paizhao" />
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home6" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

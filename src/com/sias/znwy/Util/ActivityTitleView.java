@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class ActivityTitleView extends RelativeLayout {
 	private TextView simpleItem;
-	private TextView titleRightText;
+	public TextView titleRightText;
 	public ActivityTitleView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 	}
