@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <TextView
+        android:id="@+id/gzjh_itemCompanyName"
+        style="@style/yhreDetailText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textVie"
+        style="@style/yhreDetailText"
+        android:layout_alignBottom="@+id/gzjh_itemCompanyName"
+        android:layout_toRightOf="@+id/gzjh_itemCompanyName"
+        android:text=">" />
+
+    <TextView
+        android:id="@+id/gzjh_itemUserName"
+        style="@style/yhreDetailText"
+        android:layout_alignBottom="@+id/textVie"
+        android:layout_toRightOf="@+id/textVie"
+        android:text="TextView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gzjh_itemCompanyName" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="任务名称：" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignRight="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="5dp"
+                android:text="任务编号：" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignRight="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="5dp"
+                android:text="工作概要：" />
+
+            <TextView
+                android:id="@+id/gzjh_itemTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/gzjh_itemTaskNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/gzjh_itemTaskNumber"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/gzjh_itemTaskNumber"
+                android:text="任务类型：" />
+
+            <TextView
+                android:id="@+id/gzjh_itemTaskType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/textView6"
+                android:singleLine="true"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/gzjh_itemWorkMemo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_toRightOf="@+id/textView3"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="TextView" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/jiantou" />
+    </RelativeLayout>
+
+</RelativeLayout>

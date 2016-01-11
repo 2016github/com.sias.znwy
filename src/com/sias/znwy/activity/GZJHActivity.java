@@ -7,12 +7,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.sias.znwy.R;
 import com.sias.znwy.Util.ActivityTitleView;
 import com.sias.znwy.Util.AppKit;
 import com.sias.znwy.Util.UserInfo;
 import com.sias.znwy.adapter.AbstractBaseAdapter;
+import com.sias.znwy.adapter.GZJHAdapter;
+import com.sias.znwy.demo.GZJHBean;
+import com.sias.znwy.demo.YHRWBean;
 import com.sias.znwy.web.util.WebParam;
 
 /**
@@ -50,7 +54,7 @@ public class GZJHActivity extends BaseActivity {
 	@Override
 	public AbstractBaseAdapter getAdapter() {
 		// TODO Auto-generated method stub
-		return null;
+		return new GZJHAdapter(GZJHActivity.this);
 	}
 
 	@Override
@@ -62,14 +66,17 @@ public class GZJHActivity extends BaseActivity {
 
 	@Override
 	public void processDatas(JSONObject json) {
-		// TODO Auto-generated method stub
-
+		JSONArray jsonArray = json.getJSONArray("result");
+		for (int i = 0; i < jsonArray.size(); i++) {
+			datas.add(new GZJHBean(jsonArray.getJSONObject(i)));
+		}
 	}
 
 	@Override
 	public void itemClick(int position) {
-		// TODO Auto-generated method stub
-
+		Intent intent = new Intent(GZJHActivity.this, GZJHDetailActivity.class);
+		intent.putExtra("data", (GZJHBean) datas.get(position));
+		startActivity(intent);
 	}
 
 }

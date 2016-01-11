@@ -1,11 +1,14 @@
 package com.sias.znwy.activity;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.sias.znwy.R;
 import com.sias.znwy.Util.AppKit;
 import com.sias.znwy.Util.UserInfo;
 import com.sias.znwy.adapter.AbstractBaseAdapter;
 import com.sias.znwy.adapter.CQSHAdapter;
+import com.sias.znwy.demo.CQSBBean;
+import com.sias.znwy.demo.YHRWBean;
 import com.sias.znwy.web.util.WebParam;
 
 import android.app.Activity;
@@ -63,7 +66,12 @@ public class CQSBActivity extends BaseActivity {
 
 	@Override
 	public void processDatas(JSONObject json) {
-		// TODO Auto-generated method stub
+		JSONArray jsonArray = json.getJSONArray("result");
+		if (jsonArray != null || jsonArray.size() > 0) {
+			for (int i = 0; i < jsonArray.size(); i++) {
+				datas.add(new CQSBBean(jsonArray.getJSONObject(i)));
+			}
+		}
 
 	}
 

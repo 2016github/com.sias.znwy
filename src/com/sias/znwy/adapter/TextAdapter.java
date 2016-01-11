@@ -48,12 +48,12 @@ public class TextAdapter extends BaseAdapter {
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = View.inflate(context, R.layout.adapyer_cqsh, null);
-			holder.itemDate = (TextView) convertView.findViewById(R.id.itemDate);
+			holder.itemDate = (TextView) convertView.findViewById(R.id.itemStartTime);
 			holder.itemName = (TextView) convertView.findViewById(R.id.itemName);
 			holder.itemParent = (Spinner) convertView.findViewById(R.id.itemParent);
 			holder.itemSource = (TextView) convertView.findViewById(R.id.itemSource);
 			holder.itemState = (Spinner) convertView.findViewById(R.id.itemState);
-			holder.itemTime = (TextView) convertView.findViewById(R.id.itemTime);
+			holder.itemTime = (TextView) convertView.findViewById(R.id.itemEndTime);
 			holder.itemType = (Spinner) convertView.findViewById(R.id.itemType);
 			convertView.setTag(holder);
 		} else {

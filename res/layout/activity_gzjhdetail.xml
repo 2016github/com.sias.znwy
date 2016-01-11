@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.sias.znwy.Util.ActivityTitle
+        android:id="@+id/gzjhDetailActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sias.znwy.Util.ActivityTitle>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="任务名称：" />
+
+        <TextView
+            android:id="@+id/gzjhDetailTaskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="5dp"
+            android:text="单位名称：" />
+
+        <TextView
+            android:id="@+id/gzjhDetailCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/gzjhDetailCompanyName"
+            android:layout_alignBottom="@+id/gzjhDetailCompanyName"
+            android:layout_marginLeft="32dp"
+            android:layout_toRightOf="@+id/gzjhDetailCompanyName"
+            android:text="岗位：" />
+
+        <TextView
+            android:id="@+id/gzjhDetailJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:id="@+id/zhLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:paddingBottom="2dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <EditText
+                    android:id="@+id/pileNumber"
+                    style="@style/jlxcEditText"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textViewZH"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textViewZH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/pileNumber"
+                    android:layout_alignTop="@+id/pileNumber"
+                    android:gravity="center"
+                    android:text="桩号：" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <EditText
+                    android:id="@+id/gzjhDetailMiNumber"
+                    style="@style/jlxcEditText"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/textView4"
+                    android:layout_toRightOf="@+id/textVi1"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal" />
+
+                <TextView
+                    android:id="@+id/textVi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/gzjhDetailMiNumber"
+                    android:layout_alignTop="@+id/gzjhDetailMiNumber"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="米数：" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/gzjhDetailMiNumber"
+                    android:layout_alignBottom="@+id/gzjhDetailMiNumber"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="米" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/xsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zhLayout"
+            android:paddingBottom="2dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/tex1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="行驶方向：" />
+
+                <Spinner
+                    android:id="@+id/drivingDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tex1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+                <EditText
+                    android:id="@+id/cartLaneMiNumber"
+                    style="@style/jlxcEditText"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/cartLaneMiNumber"
+                    android:layout_alignTop="@+id/cartLaneMiNumber"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="车道号：" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/BhLsyout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/xsLayout"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="病害类别:" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/tv"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/conditionParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:id="@+id/conditionSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:id="@+id/conditionThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/BhLsyout"
+            android:layout_marginTop="5dp" >
+
+            <Spinner
+                android:id="@+id/gzjhWeatherSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/gzjhWingSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout1"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="3dp" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="工作概要：" />
+
+            <EditText
+                android:id="@+id/gzjhDetailMemo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/znwy_white_shape_bg"
+                android:ems="10" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/relativeLayout1"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_marginTop="16dp" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="工程概量：" />
+
+            <EditText
+                android:id="@+id/gzjhDetailMeasurement"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView6"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/znwy_white_shape_bg"
+                android:ems="10" >
+            </EditText>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
