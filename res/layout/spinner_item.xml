@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/spinnerItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:button="@null"
