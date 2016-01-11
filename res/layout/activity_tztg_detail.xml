@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sias.znwy.Util.ActivityTitle
+        android:id="@+id/tztgDetailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sias.znwy.Util.ActivityTitle>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tztgDetailTitle" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tztgDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                android:textColor="@color/tztgItemSignColoe"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tztgDetailPublishTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textView3"
+                android:text="TextView" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView3"
+                android:layout_marginTop="5dp"
+                android:background="@color/tztgItemSignColoe" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tztgDetailName"
+                android:layout_marginTop="5dp"
+                android:text="发布人：" />
+
+            <TextView
+                android:id="@+id/tztgDetailResource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_toRightOf="@+id/textView3"
+                android:text="来源" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/finishSignlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="签收人：" />
+
+            <TextView
+                android:id="@+id/tztgDetailSignPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tztgDetailSignPerson"
+                android:layout_alignBottom="@+id/tztgDetailSignPerson"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tztgDetailSignPerson"
+                android:text="签收时间：" />
+
+            <TextView
+                android:id="@+id/tztgDetailSignTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2"
+                android:text="TextView" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/finishSignlayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/relativeLayout1" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp" >
+
+                        <TextView
+                            android:id="@+id/tztgDetailMemo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="TextView" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp" >
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="负责人：" />
+
+                        <TextView
+                            android:id="@+id/tztgDetailPersonCharge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textView4"
+                            android:layout_alignBottom="@+id/textView4"
+                            android:layout_toRightOf="@+id/textView4"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tztgDetailPersonCharge"
+                            android:layout_alignBottom="@+id/tztgDetailPersonCharge"
+                            android:layout_marginLeft="19dp"
+                            android:layout_toRightOf="@+id/tztgDetailPersonCharge"
+                            android:text="联系电话:" />
+
+                        <TextView
+                            android:id="@+id/tztgDetailPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/textView6"
+                            android:layout_toRightOf="@+id/textView6"
+                            android:text="TextView" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/noSignLauout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <Button
+                            android:id="@+id/tztgDetailBtnSign"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/znwy_tzrg_detail_sign_bg"
+                            android:text="签收"
+                            android:textColor="@color/white_color"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/itemTztgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="标题"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/itemTztgMemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/itemTztgTitle"
+        android:layout_below="@+id/itemTztgTitle"
+        android:layout_marginTop="5dp"
+        android:text="内容"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/itemWheaherSighIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/itemTztgMemo"
+        android:layout_below="@+id/itemTztgMemo"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/znwy_tzrg_item_sign_bg"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp"
+        android:text="签收"
+        android:textColor="@color/tztgItemSignColoe"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/itemWheaherSighIn"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/itemWheaherSighIn"
+        android:text="发布时间："
+        android:textColor="#A2A2A2" />
+
+    <TextView
+        android:id="@+id/itemTztgPublishTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="TextView"
+        android:textColor="#A2A2A2" />
+
+</RelativeLayout>

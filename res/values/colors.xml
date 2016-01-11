@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white_color">#FFFFFF</color>
+    <color name="tztgItemSignColoe">#7bbfea</color>
+    <color name="tztgItemUnSignColoe">#FA9600</color>
+    <color name="tztgDetailSignColor">#7bbfea</color>
+
+</resources>
