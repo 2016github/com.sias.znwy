@@ -1,6 +1,7 @@
 package com.sias.znwy.activity;
 
 import com.sias.znwy.R;
+import com.sias.znwy.Util.ActivityTitle;
 import com.sias.znwy.Util.DialogUtil;
 import com.sias.znwy.Util.UserInfo;
 import com.sias.znwy.WebUtil.QueryXchb;
@@ -23,6 +24,7 @@ import android.widget.EditText;
 public class XCHBActivity extends Activity implements OnClickListener {
 	private EditText edit_data;
 	private Button btn_query;
+	private ActivityTitle title;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,18 @@ public class XCHBActivity extends Activity implements OnClickListener {
 	private void initView() {
 		edit_data = (EditText) findViewById(R.id.edit_data);
 		btn_query = (Button) findViewById(R.id.btn_query);
+		title = (ActivityTitle) findViewById(R.id.activityTitle1);
+		title.setItemName("现场汇报");
+		title.setRightNameVisiable(View.VISIBLE);
+		title.setItemRightName("写汇报");
+		title.titleRightText.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// 进入写汇报界面
+
+			}
+		});
 		btn_query.setOnClickListener(this);
 		queryXchb();
 	}
@@ -43,20 +57,20 @@ public class XCHBActivity extends Activity implements OnClickListener {
 	 * 查询现场汇报
 	 */
 	private void queryXchb() {
-		new QueryXchb().queryXchb("xchbcx", UserInfo.getYhdh(),
-				UserInfo.getDeviceId(), "aqyz", edit_data.getText().toString(),
+		new QueryXchb().queryXchb("xchbcx", UserInfo.getYhdh(), UserInfo.getDeviceId(), "aqyz", edit_data.getText().toString(),
 				new OnResultListener() {
-					
+
 					@Override
 					public void onResult(boolean isSuccess, int errorCode, Object obj) {
 						if (isSuccess) {
-							
-						}else {
+
+						} else {
 							new DialogUtil(XCHBActivity.this, obj);
 						}
 					}
 				});
 	}
+
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {

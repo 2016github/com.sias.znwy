@@ -7,19 +7,16 @@
 
     <!-- znwy:ActivityTitleViewRightText="右侧字体描述"znwy:Visiable="0" 0：表示不可见，1表示可见 -->
 
-    <com.sias.znwy.Util.ActivityTitleView
-         xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
+    <com.sias.znwy.Util.ActivityTitle
+        android:id="@+id/activityTitle1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        znwy:ActivityTitleViewName="现场汇报" 
-         znwy:ActivityTitleViewRightText="写报告"
-        znwy:Visiable="1" >
-    </com.sias.znwy.Util.ActivityTitleView>
-   
+        android:layout_height="wrap_content" >
+    </com.sias.znwy.Util.ActivityTitle>
+
     <com.sias.znwy.Util.ActivityDateView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/activity_dataview">
+        layout="@layout/activity_dataview" >
     </com.sias.znwy.Util.ActivityDateView>
 
 </LinearLayout>
