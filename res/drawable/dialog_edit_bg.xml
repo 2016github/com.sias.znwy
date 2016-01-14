@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/znwy_yhtz_edittext_unfourcebg" android:state_window_focused="false"/>
+    <item android:drawable="@drawable/znwy_yhtz_edittext_bg" android:state_focused="true"/>
+
+</selector>

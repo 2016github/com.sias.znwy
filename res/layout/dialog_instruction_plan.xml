@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <Spinner
+            android:id="@+id/dialogXunchaType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/dialogXunchaRenwu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/dialogJiluNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp" />
+
+    <EditText
+        android:id="@+id/writGzMemo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dialog_edit_bg"
+        android:gravity="left|top"
+        android:hint="请填写工作概要"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/writGzGaiLiang"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dialog_edit_bg"
+        android:gravity="left|top"
+        android:hint="请填写工作概量"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp" >
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp" >
+
+        <EditText
+            android:id="@+id/writGzZhuanghao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_edit_bg"
+            android:ems="10"
+            android:hint="桩号" />
+
+        <EditText
+            android:id="@+id/writGzMIshu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_edit_bg"
+            android:ems="10"
+            android:hint="米数" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp" >
+
+        <EditText
+            android:id="@+id/writShangXiaXing"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_edit_bg"
+            android:ems="10"
+            android:hint="上下行" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_edit_bg"
+            android:ems="10"
+            android:hint="车道号" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/dialogWritEnsure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/queding" />
+    </RelativeLayout>
+
+</LinearLayout>
