@@ -111,6 +111,15 @@
             android:padding="10dp"
             android:text="TextView"
             android:textSize="17sp" />
+
+        <ListView
+            android:id="@+id/JHListview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" >
+        </ListView>
     </RelativeLayout>
 
 </LinearLayout>

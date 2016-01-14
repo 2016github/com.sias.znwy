@@ -72,4 +72,13 @@ public class AppKit {
 		return str;
 	}
 
+	/**
+	 * 获取当前日期
+	 */
+	public static String getNowDataAndTime() {
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
+		String str = formatter.format(curDate);
+		return str;
+	}
 }
