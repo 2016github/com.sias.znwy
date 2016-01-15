@@ -74,6 +74,7 @@
         <activity android:name="com.sias.znwy.activity.GZJHDetailActivity" >
         </activity>
         <activity android:name="com.sias.znwy.activity.TZTGDetailActivity" />
+        <activity android:name="com.sias.znwy.activity.XRJActivity" />
 
         <service
             android:name="com.baidu.location.f"

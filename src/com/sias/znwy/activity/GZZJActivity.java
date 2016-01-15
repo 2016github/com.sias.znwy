@@ -8,6 +8,7 @@ import com.sias.znwy.WebUtil.QueryGzrb;
 import com.sias.znwy.web.util.OnResultListener;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -25,7 +26,6 @@ public class GZZJActivity extends Activity implements OnClickListener {
 	private EditText edit_data;
 	private Button btn_query;
 	private ListView listview;
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,8 @@ public class GZZJActivity extends Activity implements OnClickListener {
 			queryGzrb();
 			break;
 		case R.id.activity_title_rightText:
-
+			Intent intent = new Intent(GZZJActivity.this, XRJActivity.class);
+			startActivity(intent);
 			break;
 
 		default:
