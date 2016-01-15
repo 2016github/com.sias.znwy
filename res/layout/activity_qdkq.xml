@@ -6,6 +6,7 @@
 
     <com.sias.znwy.Util.ActivityTitleView
         xmlns:znwy="http://schemas.android.com/apk/res/com.sias.znwy"
+        android:id="@+id/cxshTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         znwy:ActivityTitleViewName="签到考勤"
@@ -99,6 +100,7 @@
         android:gravity="center_vertical" >
 
         <EditText
+            android:id="@+id/signInMemo"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" >
         </EditText>

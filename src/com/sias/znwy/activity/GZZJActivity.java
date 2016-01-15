@@ -1,6 +1,7 @@
 package com.sias.znwy.activity;
 
 import com.sias.znwy.R;
+import com.sias.znwy.Util.ActivityTitleView;
 import com.sias.znwy.Util.DialogUtil;
 import com.sias.znwy.Util.UserInfo;
 import com.sias.znwy.WebUtil.QueryGzrb;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 
 /**
  * 工作总结
@@ -22,6 +24,8 @@ import android.widget.EditText;
 public class GZZJActivity extends Activity implements OnClickListener {
 	private EditText edit_data;
 	private Button btn_query;
+	private ListView listview;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,18 +63,19 @@ public class GZZJActivity extends Activity implements OnClickListener {
 	 * 查询工作日结
 	 */
 	private void queryGzrb() {
-		
-		new QueryGzrb().queryGzrb("gzrbcx", UserInfo.getYhdh(), UserInfo.getDeviceId(), "aqyz", edit_data.getText().toString(), new OnResultListener() {
-			
-			@Override
-			public void onResult(boolean isSuccess, int errorCode, Object obj) {
-				if (isSuccess) {
-					
-				}else {
-					new DialogUtil(GZZJActivity.this, obj);
-				}
-			}
-		});
-		
+
+		new QueryGzrb().queryGzrb("gzrbcx", UserInfo.getYhdh(), UserInfo.getDeviceId(), "aqyz", edit_data.getText().toString(),
+				new OnResultListener() {
+
+					@Override
+					public void onResult(boolean isSuccess, int errorCode, Object obj) {
+						if (isSuccess) {
+
+						} else {
+							new DialogUtil(GZZJActivity.this, obj);
+						}
+					}
+				});
+
 	}
 }
