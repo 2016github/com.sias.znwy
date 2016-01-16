@@ -87,6 +87,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int BhLsyout=0x7f090017;
+        public static final int ImgBtnEnsure=0x7f0900c6;
         public static final int JHListview=0x7f090054;
         public static final int MTaskNumber=0x7f090063;
         public static final int RecordLayout1=0x7f09006c;
@@ -94,11 +95,11 @@ containing a value of this type.
         public static final int ShangBaoUnit=0x7f090056;
         public static final int SuperviseStaffName=0x7f09006b;
         public static final int XCSBListView=0x7f090048;
-        public static final int action_settings=0x7f0900bd;
+        public static final int action_settings=0x7f0900cb;
         public static final int activityTitle1=0x7f090000;
         public static final int activityXjhTitle=0x7f09004d;
-        public static final int activity_title=0x7f0900bb;
-        public static final int activity_title_rightText=0x7f0900bc;
+        public static final int activity_title=0x7f0900c9;
+        public static final int activity_title_rightText=0x7f0900ca;
         public static final int addRecord=0x7f09005c;
         public static final int addressMsg=0x7f090028;
         public static final int beginStation=0x7f090062;
@@ -111,6 +112,7 @@ containing a value of this type.
         public static final int cartLaneMiNumber=0x7f090015;
         public static final int cartTaskNumber=0x7f090073;
         public static final int cartTaskNumber2=0x7f090086;
+        public static final int chooseRecordNumber=0x7f0900b9;
         public static final int conditionParent=0x7f090019;
         public static final int conditionSecond=0x7f09001a;
         public static final int conditionThird=0x7f09001b;
@@ -122,18 +124,28 @@ containing a value of this type.
         public static final int dialogXunchaRenwu=0x7f0900b0;
         public static final int dialogXunchaType=0x7f0900af;
         public static final int drivingDirection=0x7f090014;
-        public static final int editText1=0x7f09005b;
-        public static final int editText2=0x7f0900b7;
         public static final int edit_data=0x7f090002;
         public static final int edit_jiuPassword=0x7f090049;
         public static final int edit_name=0x7f09002d;
         public static final int edit_password=0x7f09002e;
         public static final int edit_xinPassword=0x7f09004a;
         public static final int edit_xinPasswordto=0x7f09004b;
+        public static final int edt_addRecordConstructionMachinery=0x7f0900c0;
+        public static final int edt_addRecordEndTime=0x7f0900c2;
+        public static final int edt_addRecordLaneNumber=0x7f0900bd;
+        public static final int edt_addRecordManagerName=0x7f0900c4;
+        public static final int edt_addRecordMeasureUnit=0x7f0900be;
+        public static final int edt_addRecordMishu=0x7f0900bb;
+        public static final int edt_addRecordNote=0x7f0900c5;
+        public static final int edt_addRecordProjectNumber=0x7f0900bf;
+        public static final int edt_addRecordSX=0x7f0900bc;
+        public static final int edt_addRecordStartTime=0x7f0900c1;
+        public static final int edt_addRecordWorkTime=0x7f0900c3;
         public static final int edt_beizhu=0x7f09007a;
         public static final int edt_beizhu2=0x7f09008d;
         public static final int edt_returnReceipt=0x7f09007c;
         public static final int edt_returnReceipt2=0x7f09008f;
+        public static final int edt_stakeNumber=0x7f0900ba;
         public static final int endStation=0x7f090069;
         public static final int finishSignlayout=0x7f09003f;
         public static final int gridview=0x7f090031;
@@ -199,7 +211,7 @@ containing a value of this type.
         public static final int signInMemo=0x7f090037;
         public static final int spinner1=0x7f090057;
         public static final int spinner2=0x7f090058;
-        public static final int spinnerItem=0x7f0900b9;
+        public static final int spinnerItem=0x7f0900c7;
         public static final int supervisionUnitName=0x7f09006a;
         public static final int taskName=0x7f0900a5;
         public static final int taskNumber=0x7f0900a6;
@@ -243,7 +255,7 @@ containing a value of this type.
         public static final int text_dingwei=0x7f090034;
         public static final int text_location=0x7f090035;
         public static final int text_nameandtime=0x7f090033;
-        public static final int text_return=0x7f0900ba;
+        public static final int text_return=0x7f0900c8;
         public static final int text_username=0x7f090030;
         public static final int text_version=0x7f090060;
         public static final int thtzDetailTitle=0x7f090061;
@@ -262,6 +274,7 @@ containing a value of this type.
         public static final int upOrDownSide2=0x7f090084;
         public static final int view1=0x7f09003d;
         public static final int view2=0x7f09007f;
+        public static final int writCDH=0x7f0900b7;
         public static final int writGzGaiLiang=0x7f0900b3;
         public static final int writGzMIshu=0x7f0900b5;
         public static final int writGzMemo=0x7f0900b2;
@@ -274,6 +287,7 @@ containing a value of this type.
         public static final int xchb_reName=0x7f0900a0;
         public static final int xchb_weather=0x7f0900a1;
         public static final int xrjActivityTitle=0x7f090055;
+        public static final int xrj_manegerName=0x7f09005b;
         public static final int xsLayout=0x7f090012;
         public static final int zhLayout=0x7f09000c;
     }
@@ -308,9 +322,10 @@ containing a value of this type.
         public static final int adapyer_cqshtest=0x7f03001b;
         public static final int dialog_instruction_plan=0x7f03001c;
         public static final int dialog_un_instruction_plan=0x7f03001d;
-        public static final int gridview_item=0x7f03001e;
-        public static final int spinner_item=0x7f03001f;
-        public static final int util_activity_title=0x7f030020;
+        public static final int dialog_xrj_addrecor=0x7f03001e;
+        public static final int gridview_item=0x7f03001f;
+        public static final int spinner_item=0x7f030020;
+        public static final int util_activity_title=0x7f030021;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -329,11 +344,31 @@ containing a value of this type.
 
 
 
+
+
+
+
+
+
+
+
+
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -359,6 +394,8 @@ containing a value of this type.
         public static final int AppTheme=0x7f070001;
         public static final int CustomDialog=0x7f070005;
         public static final int Dialog=0x7f070004;
+        public static final int dialogAddRecordLayout=0x7f070006;
+        public static final int dialogEditTextLayout=0x7f070007;
         /**  监理巡查上报界面 
          */
         public static final int jlxcEditText=0x7f070003;
