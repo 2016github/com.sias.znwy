@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <Spinner
+                    android:id="@+id/chooseRecordNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/edt_stakeNumber"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="桩号" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <EditText
+                    android:id="@+id/edt_addRecordMishu"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="米数" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edt_addRecordSX"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="上下行" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <EditText
+                    android:id="@+id/edt_addRecordLaneNumber"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="车道号" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edt_addRecordMeasureUnit"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="计量单位" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <EditText
+                    android:id="@+id/edt_addRecordProjectNumber"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="工程数量" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edt_addRecordConstructionMachinery"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="施工机械" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <EditText
+                    android:id="@+id/edt_addRecordStartTime"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="2016-05-23 12:55" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edt_addRecordEndTime"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="2016-05-23 12:55" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/dialogAddRecordLayout" >
+
+                <EditText
+                    android:id="@+id/edt_addRecordWorkTime"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="工作小时数" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edt_addRecordManagerName"
+                    style="@style/dialogEditTextLayout"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="监理姓名" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_addRecordNote"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dialog_edit_bg"
+                android:hint="备注" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/ImgBtnEnsure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/queding" />
+    </RelativeLayout>
+
+</LinearLayout>
