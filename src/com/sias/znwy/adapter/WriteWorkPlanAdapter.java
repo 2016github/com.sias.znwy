@@ -28,7 +28,7 @@ public class WriteWorkPlanAdapter extends AbstractBaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		if (object.getType() == 0) {
+		if (object.getType() == 2) {
 			holder.planType.setText("非指令计划");
 		} else {
 			holder.planType.setText("指令计划");

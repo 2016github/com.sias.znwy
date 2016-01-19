@@ -46,7 +46,7 @@ public class XJHActivity extends Activity implements OnClickListener {
 	private List<WriteWorkPlanBean> mdatas = new ArrayList<WriteWorkPlanBean>();
 	private WriteWorkPlanAdapter planAdapter;
 	private ListView plantListView;
-	private String weater, wind;
+	private String weater, wind, jlBM;
 	private JSONArray array;
 	private WebParam param;
 	private AlertDialog mandatoryPlanDialog;
@@ -57,6 +57,9 @@ public class XJHActivity extends Activity implements OnClickListener {
 	private EditText mandatoryPlanMS;
 	private EditText mandatoryPlanCDH;
 	private EditText mandatoryPlanSXX;
+	private Spinner xunchaType;
+	private Spinner xunchaRenwu;
+	private Spinner jiluNumber;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +97,6 @@ public class XJHActivity extends Activity implements OnClickListener {
 		// 设置默认值
 		mWeather.setVisibility(View.VISIBLE);
 		adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, winds);
-
 		// 设置下拉列表的风格
 		adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -153,6 +155,22 @@ public class XJHActivity extends Activity implements OnClickListener {
 		mandatoryPlanDialog = new AlertDialog.Builder(context, R.style.CustomDialog).create();
 		mandatoryPlanDialog.show();
 		mandatoryPlanDialog.getWindow().setContentView(mandatoryPlanView);
+		ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, winds);
+		xunchaType = (Spinner) mandatoryPlanView.findViewById(R.id.dialogXunchaType);
+		xunchaRenwu = (Spinner) mandatoryPlanView.findViewById(R.id.dialogXunchaRenwu);
+		jiluNumber = (Spinner) mandatoryPlanView.findViewById(R.id.dialogJiluNumber);
+		// 巡查任务
+		xunchaRenwu.setAdapter(arrayAdapter);
+		xunchaRenwu.setOnItemSelectedListener(new SpinnerSelectedListener(xunchaRenwu));
+		xunchaRenwu.setVisibility(View.VISIBLE);
+		// 记录编码
+		jiluNumber.setAdapter(arrayAdapter);
+		jiluNumber.setOnItemSelectedListener(new SpinnerSelectedListener(xunchaRenwu));
+		jiluNumber.setVisibility(View.VISIBLE);
+		// 巡查类型
+		xunchaType.setAdapter(arrayAdapter);
+		xunchaType.setOnItemSelectedListener(new SpinnerSelectedListener(xunchaType));
+		xunchaType.setVisibility(View.VISIBLE);
 		mandatoryPlanMemo = (EditText) mandatoryPlanView.findViewById(R.id.writGzMemo);
 		mandatoryPlanLiang = (EditText) mandatoryPlanView.findViewById(R.id.writGzGaiLiang);
 		mandatoryPlanZH = (EditText) mandatoryPlanView.findViewById(R.id.writGzZhuanghao);
@@ -171,6 +189,27 @@ public class XJHActivity extends Activity implements OnClickListener {
 				}
 				if (!TextUtils.isEmpty(mandatoryPlanLiang.getText().toString().trim())) {
 					obj.put("gzgl", mandatoryPlanLiang.getText().toString().trim());
+				}
+
+				obj.put("sbsj", AppKit.getNowData());
+				obj.put("jhlx", String.valueOf(1));
+				if (!TextUtils.isEmpty(weater)) {
+					obj.put("tq", weater);
+				}
+				if (!TextUtils.isEmpty(wind)) {
+					obj.put("fldm", wind);
+				}
+				if (!TextUtils.isEmpty(mandatoryPlanZH.getText().toString().trim())) {
+					obj.put("zh", mandatoryPlanZH.getText().toString().trim());
+				}
+				if (!TextUtils.isEmpty(mandatoryPlanMS.getText().toString().trim())) {
+					obj.put("ms", mandatoryPlanMS.getText().toString().trim());
+				}
+				if (!TextUtils.isEmpty(mandatoryPlanCDH.getText().toString().trim())) {
+					obj.put("cdh", mandatoryPlanCDH.getText().toString().trim());
+				}
+				if (!TextUtils.isEmpty(mandatoryPlanSXX.getText().toString().trim())) {
+					obj.put("xsfx", mandatoryPlanSXX.getText().toString().trim());
 				}
 				if (!TextUtils.isEmpty(obj.toJSONString())) {
 					array.add(obj);
@@ -235,10 +274,18 @@ public class XJHActivity extends Activity implements OnClickListener {
 				if (!TextUtils.isEmpty(unInstructionPlanLiang.getText().toString().trim())) {
 					obj.put("gzgl", unInstructionPlanLiang.getText().toString().trim());
 				}
+				obj.put("sbsj", AppKit.getNowData());
+				obj.put("jhlx", String.valueOf(2));
+				if (!TextUtils.isEmpty(weater)) {
+					obj.put("tq", weater);
+				}
+				if (!TextUtils.isEmpty(wind)) {
+					obj.put("fldm", wind);
+				}
 				if (!TextUtils.isEmpty(obj.toJSONString())) {
 					array.add(obj);
 				}
-				bean.setType(0);
+				bean.setType(2);
 				mdatas.add(bean);
 				planAdapter.notifyDataSetChanged();
 				unInstructionPlanDialog.dismiss();
