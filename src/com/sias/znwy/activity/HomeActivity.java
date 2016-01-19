@@ -1,8 +1,17 @@
 package com.sias.znwy.activity;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.sias.znwy.R;
 import com.sias.znwy.Util.ActivityJump;
+import com.sias.znwy.Util.RequestTools;
+import com.sias.znwy.Util.SignRule;
+import com.sias.znwy.Util.UserInfo;
 import com.sias.znwy.demo.Tusbkey;
 import com.sias.znwy.demo.WyAutoupdate;
+import com.sias.znwy.web.util.OnResultListener;
+import com.sias.znwy.web.util.WebParam;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,10 +22,12 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 /**
  * 主界面
+ * 
  * @author Administrator
- *
+ * 
  */
 public class HomeActivity extends Activity {
 	private int icorn[];
@@ -27,6 +38,7 @@ public class HomeActivity extends Activity {
 	private Tusbkey tusbkey;
 	private TextView text_username;
 	private WyAutoupdate wyautoupdate;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -35,11 +47,12 @@ public class HomeActivity extends Activity {
 		initData();
 		initView();
 	}
+
 	private void initView() {
-		wyautoupdate= (WyAutoupdate) getIntent().getExtras().getSerializable("wyautoupdate");
-		tusbkey=(Tusbkey) getIntent().getExtras().getSerializable("tusbkey");
-		text_username=(TextView) findViewById(R.id.text_username);
-		text_username.setText("你好："+tusbkey.getPin());
+		wyautoupdate = (WyAutoupdate) getIntent().getExtras().getSerializable("wyautoupdate");
+		tusbkey = (Tusbkey) getIntent().getExtras().getSerializable("tusbkey");
+		text_username = (TextView) findViewById(R.id.text_username);
+		text_username.setText("你好：" + tusbkey.getPin());
 	}
 
 	/**
@@ -47,15 +60,41 @@ public class HomeActivity extends Activity {
 	 */
 	private void initData() {
 		inflate = LayoutInflater.from(HomeActivity.this);
-		icorn = new int[] { R.drawable.home1, R.drawable.home2,
-				R.drawable.home3, R.drawable.home4,
-				R.drawable.home5, R.drawable.home6,
-				R.drawable.home7 ,R.drawable.home8,R.drawable.home9};
-		icornName = new String[] { "通知公告", "考勤签到", "出勤上报", "监理巡查", "养护任务通知", "工作计划","现场汇报",
-				"工作日结","系统设置"};
+		icorn = new int[] { R.drawable.home1, R.drawable.home2, R.drawable.home3, R.drawable.home4, R.drawable.home5, R.drawable.home6,
+				R.drawable.home7, R.drawable.home8, R.drawable.home9 };
+		icornName = new String[] { "通知公告", "考勤签到", "出勤上报", "监理巡查", "养护任务通知", "工作计划", "现场汇报", "工作日结", "系统设置" };
 		gridview = (GridView) findViewById(R.id.gridview);
 		adapter = new GridViewAdapter();
 		gridview.setAdapter(adapter);
+		getSignRule();
+	}
+
+	/**
+	 * 获取签到规则
+	 * 
+	 */
+	private void getSignRule() {
+		new RequestTools().request(
+				WebParam.create().addParam("jklx", "qdgz").addParam("yhbh", UserInfo.getYhdh()).addParam("sjbs", UserInfo.getDeviceId())
+						.addParam("aqyz", "aqyz"), new OnResultListener() {
+
+					@Override
+					public void onResult(boolean isSuccess, int errorCode, Object obj) {
+						if (isSuccess) {
+							// yhdh:用户代号,sxsj:生效时间,qdkssj:签到开始时间,qdjssj:签到结束时间,jgxss:间隔小时数,yxpcfz:允许偏差分钟数}
+							JSONObject json = (JSONObject) obj;
+							JSONArray jsonArray = json.getJSONArray("result");
+							SignRule.setJgxss(jsonArray.getJSONObject(0).getString("jgxss"));
+							SignRule.setYhdh(jsonArray.getJSONObject(0).getString("yhdh"));
+							SignRule.setSxsj(jsonArray.getJSONObject(0).getString("sxsj"));
+							SignRule.setQdkssj(jsonArray.getJSONObject(0).getString("qdkssj"));
+							SignRule.setQdjssj(jsonArray.getJSONObject(0).getString("qdjssj"));
+							SignRule.setYxpcfz(jsonArray.getJSONObject(0).getString("yxpcfz"));
+						}
+
+					}
+				});
+
 	}
 
 	class GridViewAdapter extends BaseAdapter {
@@ -76,8 +115,7 @@ public class HomeActivity extends Activity {
 		}
 
 		@Override
-		public View getView(final int position, View convertView,
-				ViewGroup parent) {
+		public View getView(final int position, View convertView, ViewGroup parent) {
 			ViewHold hold;
 			if (convertView == null) {
 				hold = new ViewHold();
@@ -103,7 +141,7 @@ public class HomeActivity extends Activity {
 						ActivityJump.JumpActivity(HomeActivity.this, QDKQActivity.class);
 						break;
 					case 2:
-						//出勤上报
+						// 出勤上报
 						ActivityJump.JumpActivity(HomeActivity.this, CQSBActivity.class);
 						break;
 					case 3:
@@ -115,7 +153,7 @@ public class HomeActivity extends Activity {
 						ActivityJump.JumpActivity(HomeActivity.this, YHRWActivity.class);
 						break;
 					case 5:
-						//工作计划
+						// 工作计划
 						ActivityJump.JumpActivity(HomeActivity.this, GZJHActivity.class);
 						break;
 					case 6:
@@ -128,10 +166,10 @@ public class HomeActivity extends Activity {
 						break;
 					case 8:
 						// 系统设置
-						Bundle bun=new Bundle();
+						Bundle bun = new Bundle();
 						bun.putString("version", wyautoupdate.getVersion());
 						bun.putString("yhdh", tusbkey.getPin());
-						ActivityJump.JumpActivity(HomeActivity.this, XTSZActivity.class,bun);
+						ActivityJump.JumpActivity(HomeActivity.this, XTSZActivity.class, bun);
 						break;
 					default:
 						break;

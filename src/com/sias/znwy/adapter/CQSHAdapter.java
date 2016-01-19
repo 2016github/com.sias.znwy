@@ -107,16 +107,10 @@ public class CQSHAdapter extends AbstractBaseAdapter {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, m_itemParent);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		holder.itemParent.setAdapter(adapter);
+
 		ArrayAdapter<String> itemTypeAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, m_itemType);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		holder.itemType.setAdapter(itemTypeAdapter);
-		// List<Map<String, Object>> listems = new ArrayList<Map<String,
-		// Object>>();
-		// for (int i = 0; i < m_itemType.length; i++) {
-		// Map<String, Object> listem = new HashMap<String, Object>();
-		// listem.put("name", m_itemState[i]);
-		// listems.add(listem);
-		// }
 
 		ArrayAdapter<String> itemStateAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, m_itemState);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -125,48 +119,7 @@ public class CQSHAdapter extends AbstractBaseAdapter {
 		holder.itemParent.setSelection(1, true);
 		holder.itemType.setSelection(1, true);
 		holder.itemState.setSelection(1, true);
-		holder.itemType.setOnItemSelectedListener(new OnItemSelectedListener() {
 
-			@Override
-			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				parent.setVisibility(View.VISIBLE);
-
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> parent) {
-				// TODO Auto-generated method stub
-
-			}
-		});
-		holder.itemState.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-			@Override
-			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				parent.setVisibility(View.VISIBLE);
-
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> parent) {
-				// TODO Auto-generated method stub
-
-			}
-		});
-		holder.itemParent.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-			@Override
-			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				parent.setVisibility(View.VISIBLE);
-
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> parent) {
-				// TODO Auto-generated method stub
-
-			}
-		});
 		return convertView;
 	}
 
