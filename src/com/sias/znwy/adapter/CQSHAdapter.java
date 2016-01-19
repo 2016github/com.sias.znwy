@@ -35,7 +35,7 @@ public class CQSHAdapter extends AbstractBaseAdapter {
 		final ViewHolder holder;
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = View.inflate(mContext, R.layout.adapyer_cqshtest, null);
+			convertView = View.inflate(mContext, R.layout.adapyer_cqsh, null);
 			holder.itemStartTime = (TextView) convertView.findViewById(R.id.itemStartTime);
 			holder.itemName = (TextView) convertView.findViewById(R.id.itemName);
 			holder.itemParent = (Spinner) convertView.findViewById(R.id.itemParent);
