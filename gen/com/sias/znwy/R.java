@@ -319,13 +319,12 @@ containing a value of this type.
         public static final int adapter_xchb=0x7f030018;
         public static final int adapter_yhrw=0x7f030019;
         public static final int adapyer_cqsh=0x7f03001a;
-        public static final int adapyer_cqshtest=0x7f03001b;
-        public static final int dialog_instruction_plan=0x7f03001c;
-        public static final int dialog_un_instruction_plan=0x7f03001d;
-        public static final int dialog_xrj_addrecor=0x7f03001e;
-        public static final int gridview_item=0x7f03001f;
-        public static final int spinner_item=0x7f030020;
-        public static final int util_activity_title=0x7f030021;
+        public static final int dialog_instruction_plan=0x7f03001b;
+        public static final int dialog_un_instruction_plan=0x7f03001c;
+        public static final int dialog_xrj_addrecor=0x7f03001d;
+        public static final int gridview_item=0x7f03001e;
+        public static final int spinner_item=0x7f03001f;
+        public static final int util_activity_title=0x7f030020;
     }
     public static final class menu {
         public static final int main=0x7f080000;
